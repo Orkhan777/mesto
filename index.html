@@ -81,8 +81,24 @@
         </section>
     </main>
 
-    <div class="footer">
+    <footer class="footer">
         <p class="footer__copyright">&#169; 2023 Mesto Russia</p>
+    </footer>
+
+    <div class="popup popup-edit">
+        <div class="popup__container">
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <form class="popup__form popup__edit-form" name="popup__edit-form">
+                <input class="popup__input popup__profile-name" type="text" name="popup__profile-name" id="popup__profile-name" value="Жак-Ив Кусто" required placeholder="Имя" minlength="2" maxlength="15">
+                <!--<span class="popup__input-error popup__profile-name-error"></span>-->
+                <input class="popup__input popup__profile-job" type="text" name="popup__profile-job" id="popup__profile-job" value="Исследователь океана" required placeholder="Ваша профессия" minlength="2" maxlength="15">
+                <!--<span class="popup__input-error popup__profile-job-error"></span>-->
+                <button class="popup__save-button popup__save-button" type="submit">Сохранить</button>
+            </form>
+            <button class="popup__close-button" type="button"><img class="popup__close" src="./images/Close Icon.png" alt="Кнопка закрыть"></button>       
+        </div>
     </div>
+
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

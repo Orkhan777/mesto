@@ -8,6 +8,7 @@
   transition: .2s;
   border: 1px solid #FFFFFF;
   padding: 0;
+  cursor: pointer;
 }
 
 .profile__button-edit:hover {

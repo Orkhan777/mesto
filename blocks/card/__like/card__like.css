@@ -4,6 +4,8 @@
   height: 19px;
   border-style: none;
   cursor: pointer;
+  transition: .3s;
+  border: none;
 }
   
 .place__like:hover {
@@ -11,5 +13,5 @@
 }
 
 .place__like:active {
-  color: #000;
+  background-image: url(../../../images/like_active.png);
 }
