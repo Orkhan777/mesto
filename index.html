@@ -16,7 +16,6 @@
         <section class="profile">
             <div class="profile__content">
             <img class="profile__avatar" src="./images/Avatar.png" alt="Фотография профиля">
-            <!--<button class="profile__button-edit-avatar" type="button"></button>-->
             <div class="profile__info">
             <div class="profile__item">
                 <h1 class="profile__name">Жак-Ив Кусто</h1>
@@ -47,7 +46,7 @@
                 </div>
 
                 <div class="card__info">
-                    <img class="card__image" src="./images/sochi.jpg" alt="">
+                    <img class="card__image" src="./images/sochi.jpg" alt="Фотография Сочи">
                     <div class="card__text">
                         <h2 class="card__title">Сочи</h2>
                         <button class="card__like"></button>
@@ -71,7 +70,7 @@
                 </div>
 
                 <div class="card__info">
-                    <img class="card__image" src="./images/North Ossetia-Alania.jpg" alt="Горы Северной Осетии">
+                    <img class="card__image" src="./images/Ossetia.jpg" alt="Горы Северной Осетии">
                     <div class="card__text">
                         <h2 class="card__title">Северная Осетия</h2>
                         <button class="card__like"></button>
@@ -85,19 +84,17 @@
         <p class="footer__copyright">&#169; 2023 Mesto Russia</p>
     </footer>
 
-    <div class="popup popup-edit">
+    <section class="popup">
         <div class="popup__container">
             <h2 class="popup__title">Редактировать профиль</h2>
             <form class="popup__form popup__edit-form" name="popup__edit-form">
-                <input class="popup__input popup__profile-name" type="text" name="popup__profile-name" id="popup__profile-name" value="Жак-Ив Кусто" required placeholder="Имя" minlength="2" maxlength="15">
-                <!--<span class="popup__input-error popup__profile-name-error"></span>-->
-                <input class="popup__input popup__profile-job" type="text" name="popup__profile-job" id="popup__profile-job" value="Исследователь океана" required placeholder="Ваша профессия" minlength="2" maxlength="15">
-                <!--<span class="popup__input-error popup__profile-job-error"></span>-->
-                <button class="popup__save-button popup__save-button" type="submit">Сохранить</button>
+                <input class="popup__input" type="text" name="popup__profile-name" id="popup__profile-name" value="" required placeholder="Имя" minlength="2" maxlength="30">
+                <input class="popup__input" type="text" name="popup__profile-job" id="popup__profile-job" value="" required placeholder="Ваша профессия" minlength="2" maxlength="30">
+                <button class="popup__save-button" type="submit">Сохранить</button>
             </form>
-            <button class="popup__close-button" type="button"><img class="popup__close" src="./images/Close Icon.png" alt="Кнопка закрыть"></button>       
+            <button class="popup__close-button" type="button"></button>       
         </div>
-    </div>
+    </section>
 
     <script src="./scripts/script.js"></script>
 </body>

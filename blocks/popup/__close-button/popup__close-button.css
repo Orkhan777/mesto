@@ -8,6 +8,12 @@
   border: none;
   padding: 0;
   cursor: pointer;
+  background-image: url(../../../images/Close\ Icon.png);
+  background-size: cover;
+}
+
+.popup__close-button:hover {
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 645px) {

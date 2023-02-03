@@ -1,5 +1,7 @@
 .card__like {
   background-image: url(../../../images/like.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 22px;
   height: 19px;
   border-style: none;
@@ -8,10 +10,6 @@
   border: none;
 }
   
-.place__like:hover {
-  opacity: .6;
-}
-
-.place__like:active {
-  background-image: url(../../../images/like_active.png);
+.card__like:hover {
+  opacity: .5;
 }
