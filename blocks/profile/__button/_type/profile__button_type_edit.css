@@ -1,4 +1,4 @@
-.profile__button-edit {
+.profile__button_type_edit {
   background-image: url(../../../../images/Edit\ Button.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -10,15 +10,17 @@
   padding: 0;
   cursor: pointer;
 }
-
-.profile__button-edit:hover {
+  
+.profile__button_type_edit:hover {
   opacity: .6;
   cursor: pointer;
 }
-
+  
 @media screen and (max-width: 645px) {
-  .profile__button-edit {
+  .profile__button_type_edit {
     min-width: 18px;
     min-height: 18px;
-  }
+    margin: 0 auto;
+    background-size: 18px;
+ }
 }

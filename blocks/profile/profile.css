@@ -8,15 +8,19 @@
 @media screen and (max-width: 1023px) {
   .profile {
     padding: 10px;
-
   } 
 }
 
-@media screen and (max-width: 645px) {
+@media screen and (max-width: 660px) {
   .profile {
-    max-width: 282px;
-    max-height: 286px;
     flex-direction: column;
     margin: 0 auto 36px;
+    padding: 0;
   } 
+}
+
+@media screen and (max-width: 500px) {
+  .profile {
+    max-width: 282px;
+  }
 }

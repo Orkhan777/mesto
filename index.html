@@ -18,74 +18,72 @@
             <div class="profile__info">
             <div class="profile__item">
                 <h1 class="profile__name">Жак-Ив Кусто</h1>
-                <button class="profile__button-edit" type="button"></button>
+                <button class="profile__button_type_edit" type="button"></button>
             </div>
                 <p class="profile__position">Исследователь океана</p>
             </div>
             </div>
-            <button class="profile__button-add" type="button"></button>
+            <button class="profile__button_type_add" type="button"></button>
         </section>
-        <section class="elements">
-            <div class="card">
-                <div class="card__info">
+        <section class="elements" aria-label="Фотографии">
+                <article class="card">
                     <img class="card__image" src="./images/Moscow.jpg" alt="Фотография храма Василия Блаженного">
                     <div class="card__text">
                         <h2 class="card__title">Москва</h2>
-                        <button class="card__like"></button>
+                        <button class="card__like" type="button"></button>
                     </div>
-                </div>
-                <div class="card__info">
+                </article>
+                <article class="card">
                     <img class="card__image" src="./images/Sankt-Peterburg.jpg" alt="Фотография Зимнего Дворца">
                     <div class="card__text">
                         <h2 class="card__title">Санкт-Петербург</h2>
-                        <button class="card__like"></button>
+                        <button class="card__like" type="button"></button>
                     </div>
-                </div>
-                <div class="card__info">
+                </article>
+                <article class="card">
                     <img class="card__image" src="./images/sochi.jpg" alt="Фотография Сочи">
                     <div class="card__text">
                         <h2 class="card__title">Сочи</h2>
-                        <button class="card__like"></button>
+                        <button class="card__like" type="button"></button>
                     </div>
-                </div>
-                <div class="card__info">
+                </article>
+                <article class="card">
                     <img class="card__image" src="./images/Baikal.jpg" alt="Фотография зимнего Байкала">
                     <div class="card__text">
                         <h2 class="card__title">Озеро Байкал</h2>
-                        <button class="card__like"></button>
+                        <button class="card__like" type="button"></button>
                     </div>
-                </div>
-                <div class="card__info">
+                </article>
+                <article class="card">
                     <img class="card__image" src="./images/Elbrus.jpg" alt="Фотография вида на гору Эльбрус">
                     <div class="card__text">
                         <h2 class="card__title">Гора Эльбрус</h2>
-                        <button class="card__like"></button>
+                        <button class="card__like" type="button"></button>
                     </div>
-                </div>
-                <div class="card__info">
+                </article>
+                <article class="card">
                     <img class="card__image" src="./images/Ossetia.jpg" alt="Горы Северной Осетии">
                     <div class="card__text">
                         <h2 class="card__title">Северная Осетия</h2>
-                        <button class="card__like"></button>
+                        <button class="card__like" type="button"></button>
                     </div>
-                </div>
-            </div>
+                </article>
         </section>
     </main>
     <footer class="footer">
-        <p class="footer__copyright">&#169; 2023 Mesto Russia</p>
+        <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
     </footer>
-    <section class="popup">
+    <div class="popup">
         <div class="popup__container">
             <h2 class="popup__title">Редактировать профиль</h2>
-            <form class="popup__form popup__edit-form" name="popup__edit-form">
-                <input class="popup__input" type="text" name="popup__profile-name" id="popup__profile-name" value="" required placeholder="Имя" minlength="2" maxlength="30">
-                <input class="popup__input" type="text" name="popup__profile-job" id="popup__profile-job" value="" required placeholder="Ваша профессия" minlength="2" maxlength="30">
+            <form class="popup__form" name="popup__edit-form">
+                <input class="popup__input popup__input_type_name" type="text" name="popup__profile-name" id="popup__profile-name" value="" required placeholder="Имя" minlength="2" maxlength="30">
+                <input class="popup__input popup__input_type_job" type="text" name="popup__profile-job" id="popup__profile-job" value="" required placeholder="Ваша профессия" minlength="2" maxlength="30">
                 <button class="popup__save-button" type="submit">Сохранить</button>
             </form>
             <button class="popup__close-button" type="button"></button>       
         </div>
-    </section>
-    <script src="./scripts/script.js"></script>
+    </div>
+    <script src="./scripts/index.js"></script>
 </body>
 </html>
