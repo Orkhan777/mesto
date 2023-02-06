@@ -1,5 +1,5 @@
 //Открытие и закрытие popup
-const aboutButton = document.querySelector(".profile__button_type_edit");
+const aboutButton = document.querySelector(".profile__edit-button");
 const popup = document.querySelector(".popup");
 const closeButton = popup.querySelector(".popup__close-button");
 const editForm = document.querySelector(".popup__form")
