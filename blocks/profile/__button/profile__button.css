@@ -1,0 +1,5 @@
+.profile__button {
+  padding: 0;
+  transition: .2s;
+  cursor: pointer;
+}

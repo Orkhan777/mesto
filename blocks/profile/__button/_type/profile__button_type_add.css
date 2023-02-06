@@ -7,8 +7,6 @@
   width: 150px;
   min-height: 50px;
   border: 2px solid white;
-  padding: 0;
-  transition: .2s;
 }
     
 .profile__button_type_add:hover {
