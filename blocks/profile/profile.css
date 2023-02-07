@@ -14,13 +14,15 @@
 @media screen and (max-width: 680px) {
   .profile {
     flex-direction: column;
-    margin: 0 auto 36px;
     padding: 0;
+    max-width: 282px;
+    margin: 0 auto 36px;
   } 
 }
 
-@media screen and (max-width: 500px) {
+/*@media screen and (max-width: 500px) {
   .profile {
     max-width: 282px;
+    margin: 0 auto 36px;
   }
-}
+}*/
