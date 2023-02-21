@@ -1,4 +1,3 @@
-
 const editButton = document.querySelector(".profile__edit-button");
 const closeButton = document.querySelector(".popup__close-button");
 const likeButton = document.querySelector(".button-like");
@@ -104,7 +103,6 @@ function createCard (name, link) {
   const removeButton = newCard.querySelector(".button-remove");
   const likeButton = newCard.querySelector(".button-like");
 
-
   cardImg.addEventListener("click", () => {
     openPopupImg(name, link);
   });
@@ -113,7 +111,6 @@ function createCard (name, link) {
     const cardDelete = removeButton.closest(".card");
     cardDelete.remove();
   });
-
 
   likeButton.addEventListener("click", function () {
     likeButton.classList.toggle("card__like_active");
@@ -125,13 +122,13 @@ initialCards.forEach(function (elements) {
   createCard(elements.name, elements.link)
 })
 
-function formSubmitHandler (eve, name, link) {
+function handlerFormSubmit (eve, name, link) {
   eve.preventDefault();
   createCard(name, link);
   closePopupForCard ()
 };
 addForm.addEventListener("submit", (evt) => {
-  formSubmitHandler (evt, nameCard.value, imagePopup.value);
+  handlerFormSubmit (evt, nameCard.value, imagePopup.value);
 });
 
 function openPopupForCard () {
