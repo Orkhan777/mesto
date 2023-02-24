@@ -1,10 +1,9 @@
 const popupProfileOpenButton = document.querySelector(".profile__edit-button");
-const popupProfileCloseButton = document.querySelectorAll(".popup__close-button");
+const popupsCloseButtons = document.querySelectorAll(".popup__close-button");
 const templateLikeButton = document.querySelectorAll(".button-like");
 
-const popupProfile = document.querySelector(".popup");
-const popupName = document.querySelector(".profile__name");
-const popupPosition = document.querySelector(".profile__position");
+const profileUserName = document.querySelector(".profile__name");
+const profileUserPosition = document.querySelector(".profile__position");
 const popupProfileName = document.getElementById("popup__profile-name");
 const popupProfileJob = document.getElementById("popup__profile-job");
 
@@ -38,21 +37,20 @@ function closePopup (element) {
 
 function handlerOpenFormPopupProfile () {
   openPopup(popupProfileEdit)
-  popupProfileName.value = popupName.textContent;
-  popupProfileJob.value = popupPosition.textContent;
+  popupProfileName.value = profileUserName.textContent;
+  popupProfileJob.value = profileUserPosition.textContent;
 }
 popupProfileOpenButton.addEventListener("click", handlerOpenFormPopupProfile)
 
-
 function editProfile(eve) {
   eve.preventDefault();
-  popupName.textContent = popupProfileName.value;
-  popupPosition.textContent = popupProfileJob.value;
+  profileUserName.textContent = popupProfileName.value;
+  profileUserPosition.textContent = popupProfileJob.value;
   handlerCloseFormPopupProfile ();
 }
 formAddProfilePopup.addEventListener("submit", editProfile);
 
-popupProfileCloseButton.forEach((button) => {
+popupsCloseButtons.forEach((button) => {
   const popupProfile=button.closest(".popup");
   button.addEventListener("click", () => closePopup(popupProfile));
 });
@@ -66,10 +64,6 @@ function handlerOpenFormPopupAddPlace () {
   formAddPlacePopup.reset();
 }
 popupProfileAddButton.addEventListener("click", handlerOpenFormPopupAddPlace);
-
-function handlerCloseFormPopupAddPlace () {
-  closePopup(popupAddPlace);
-}
 
 function handlerOpenPopupImage (name, link) {
   const photo = photoImagePopup;
@@ -115,8 +109,8 @@ initialCards.forEach(function (element) {
 function handlerCreateCardFormPopupAdd (eve, name, link) {
   eve.preventDefault();
   const newCard = createCard(name, link);
-  handlerCloseFormPopupAddPlace()
   cards.prepend(newCard);
+  closePopup(popupAddPlace)
 };
 formAddPlacePopup.addEventListener("submit", (evt) => {
   handlerCreateCardFormPopupAdd(evt, popupPlaceName.value, imageLinkPopup.value);
