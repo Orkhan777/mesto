@@ -4,7 +4,7 @@ const formValidation = {
   buttonSelector: '.popup__save-button',
   disabledButtonSelector: 'popup__save-button_disabled',
   inputErrorSelector: 'popup__input-error',
-  errorClass: 'form__span-error_active',
+  errorClass: 'popup__span-error_active',
 };
 
 const showError = (formValidation, formElement, inputElement) => {

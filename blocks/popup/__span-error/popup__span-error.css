@@ -1,11 +1,7 @@
-.form__span-error_active {
-  display: block;
+.popup__span-error {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
-  color: #FF0000;
-  width: 358px;
-  padding-top: 5px;
 }
