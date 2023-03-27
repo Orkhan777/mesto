@@ -41,12 +41,10 @@ function openPopup(element) {
   document.addEventListener('keydown', closeByEscape); 
 }
 
-
 function closePopup (element) {
   element.classList.remove("popup_opened")
   document.removeEventListener("keydown", closeByEscape);
 }
-
 
 function closeByEscape (evt) {
   if (evt.key === "Escape") {
@@ -63,7 +61,6 @@ function handlerOpenFormPopupProfile () {
 }
 popupProfileOpenButton.addEventListener("click", handlerOpenFormPopupProfile)
 
-
 function editProfile(eve) {
   eve.preventDefault();
   profileUserName.textContent = popupProfileName.value;
@@ -72,18 +69,15 @@ function editProfile(eve) {
 }
 formAddProfilePopup.addEventListener("submit", editProfile);
 
-
 popupsCloseButtons.forEach((button) => {
   const popupProfile=button.closest(".popup");
   button.addEventListener("click", () => closePopup(popupProfile));
 });
 
-
 function handlerCloseFormPopupProfile () {
   closePopup(popupProfileEdit)
   validatorEditProfile.disabledButton(formValidation);
 }
-
 
 function handlerOpenFormPopupAddPlace () {
   formAddPlacePopup.reset();
@@ -92,12 +86,10 @@ function handlerOpenFormPopupAddPlace () {
 }
 popupProfileAddButton.addEventListener("click", handlerOpenFormPopupAddPlace);
 
-
 function handlerCloseFormPopupAddPlace () {
   closePopup(popupAddPlace);
   validatorFormAddPlace.disabledButton(formValidation);
 }
-
 
 export function handlerOpenPopupImage (name, link) {
   const photo = photoImagePopup;
@@ -107,7 +99,6 @@ export function handlerOpenPopupImage (name, link) {
   title.textContent= name;
   openPopup(popupOpenImg);
 }
-
 
 const popups = document.querySelectorAll(".popup");
 popups.forEach((popup) => {
@@ -120,7 +111,6 @@ popups.forEach((popup) => {
   popups.addEventListener("click", closePopupClickOverlay)
 });
 
-
 function createCard (data, templateSelector) {
   const newCard = new Card (data, templateSelector);
   const cardElement = newCard.generateCard();
@@ -131,7 +121,6 @@ initialCards.forEach((item) => {
   cards.append(createCard(item, "#card__template"));
 });
 
-
 formAddPlacePopup.addEventListener("submit", (e) => {
   e.preventDefault();
   const userData = {
@@ -139,7 +128,6 @@ formAddPlacePopup.addEventListener("submit", (e) => {
     link: imageLinkPopup.value,
   }
   handlerCloseFormPopupAddPlace();
-
   cards.prepend(createCard(userData, "#card__template"));
 });
 

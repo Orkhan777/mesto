@@ -13,7 +13,6 @@ _getTemplate() {
   .content
   .querySelector(".card")
   .cloneNode(true);
-
   return cardElement;
 }
 
@@ -22,10 +21,8 @@ generateCard() {
   this._like = this._element.querySelector(".button-like");
   this._image = this._element.querySelector(".card__image")
   this._setEventListeners();
-
   this._image.style.backgroundImage =  `url(${this._link})`;
   this._element.querySelector(".card__title").textContent = this._name;
-
   return this._element;
 }
 
@@ -51,5 +48,4 @@ _handleDeleteButton() {
   this._element.remove();
   this._element = null;
 }
-
 }
