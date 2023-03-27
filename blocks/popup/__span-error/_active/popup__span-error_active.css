@@ -9,3 +9,9 @@
   width: 358px;
   padding-top: 5px;
 }
+
+@media screen and (max-width: 645px) {
+  .popup__span-error_active {
+    width: 230px;
+  }
+}

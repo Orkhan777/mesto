@@ -1,3 +1,5 @@
+export {initialCards, formValidation};
+
 const initialCards = [
     {
       name: 'Архыз',
@@ -24,3 +26,12 @@ const initialCards = [
       link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
     }
   ];
+
+const formValidation = {
+  formSelector: '.popup__form',
+  inputSelector: '.popup__input',
+  buttonSelector: '.popup__save-button',
+  disabledButtonSelector: 'popup__save-button_disabled',
+  inputErrorSelector: 'popup__input-error',
+  errorClass: 'popup__span-error_active',
+};
