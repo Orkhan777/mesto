@@ -2,6 +2,6 @@
   width: 282px;
   height: 282px;
   object-fit: cover;
-  background-repeat: round;
+  background-size: cover;
   cursor: pointer;
 }
