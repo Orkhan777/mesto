@@ -7,11 +7,11 @@
   line-height: 15px;
   color: #FF0000;
   width: 358px;
-  padding-top: 5px;
+  position: absolute;
 }
 
 @media screen and (max-width: 645px) {
   .popup__span-error_active {
-    width: 230px;
+    width: 242px;
   }
 }

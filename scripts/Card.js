@@ -17,7 +17,7 @@ export class Card {
 
   generateCard() {
     this._element = this._getTemplate();
-    this._buttonLike = this._element.querySelector(".button-like"); //&&
+    this._buttonLike = this._element.querySelector(".button-like");
     this._image = this._element.querySelector(".card__image");
     this._setEventListeners();
     this._image.style.backgroundImage = `url(${this._link})`;

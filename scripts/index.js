@@ -4,7 +4,6 @@ import { initialCards, formValidation } from "./cards.js";
 
 const popupProfileOpenButton = document.querySelector(".profile__edit-button");
 const popupsCloseButtons = document.querySelectorAll(".popup__close-button");
-//const templateLikeButton = document.querySelectorAll(".button-like");
 
 const profileUserName = document.querySelector(".profile__name");
 const profileUserPosition = document.querySelector(".profile__position");
@@ -19,16 +18,13 @@ const popupPlaceName = document.getElementById("name-card");
 const imageLinkPopup = document.getElementById("images");
 const formAddPlacePopup = document.querySelector("#add-form");
 const popupProfileAddButton = document.querySelector(".profile__add-button");
-const popupCloseButtonImg = document.getElementById("close-button-add");
 
 const cardsContainer = document.querySelector(".elements");
-const templateCard = document.querySelector("#card__template").content;
 
 const titleImagePopup = document.querySelector(".popup__photo-title");
 const photoImagePopup = document.querySelector(".popup__photo");
 
 const popupOpenImg = document.querySelector("#img-popup");
-const imgCloseButton = document.querySelector("#close-photo-card");
 
 const profileFormSubmitButton = formAddProfilePopup.querySelector(".popup__save-button");
 
@@ -56,12 +52,12 @@ function handleOpenProfilePopup() {
   openPopup(popupProfileEdit);
   popupProfileName.value = profileUserName.textContent;
   popupProfileJob.value = profileUserPosition.textContent;
-  //validatorEditProfile.removeValidationErrors();
+  validatorEditProfile.removeValidationErrors();
 }
 popupProfileOpenButton.addEventListener("click", handleOpenProfilePopup);
 
-function editProfile(eve) {
-  eve.preventDefault();
+function editProfile(evt) {
+  evt.preventDefault();
   profileUserName.textContent = popupProfileName.value;
   profileUserPosition.textContent = popupProfileJob.value;
   closeProfilePopupAfterSubmit();
@@ -75,7 +71,6 @@ popupsCloseButtons.forEach((button) => {
 
 function closeProfilePopupAfterSubmit() {
   closePopup(popupProfileEdit);
-  //validatorEditProfile.disableButton(formValidation);
 }
 
 function handleOpenPopupAddPlace() {
