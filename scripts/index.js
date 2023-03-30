@@ -75,6 +75,7 @@ function closeProfilePopupAfterSubmit() {
 
 function handleOpenPopupAddPlace() {
   formAddPlacePopup.reset();
+  validatorFormAddPlace.disableButton(formValidation);
   openPopup(popupAddPlace);
   validatorFormAddPlace.removeValidationErrors();
 }
