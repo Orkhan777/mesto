@@ -2,7 +2,7 @@
   display: flex;
   min-width: 358px;
   min-height: 27px;
-  justify-content: start;
+  justify-content: flex-start;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;

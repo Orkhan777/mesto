@@ -1,23 +1,24 @@
-import { handleOpenPopupImage } from "./index.js";
-
 export class Card {
-  constructor(data, templateSelector) {
+  constructor(data, templateSelector, handleCardClick) {
+    this._data = data;
     this._name = data.name;
     this._link = data.link;
     this._templateSelector = templateSelector;
+    this._handleCardClick = handleCardClick;
   }
 
   _getTemplate() {
     const cardElement = document
       .querySelector(this._templateSelector)
-      .content.querySelector(".card")
+      .content
+      .querySelector(".card")
       .cloneNode(true);
     return cardElement;
   }
 
   generateCard() {
     this._element = this._getTemplate();
-    this._buttonLike = this._element.querySelector(".button-like");
+    this._like = this._element.querySelector(".button-like");
     this._image = this._element.querySelector(".card__image");
     this._setEventListeners();
     this._image.style.backgroundImage = `url(${this._link})`;
@@ -25,27 +26,29 @@ export class Card {
     return this._element;
   }
 
+  _zoomImageCard() {
+    this._handleCardClick(this._data);
+  }
+
   _setEventListeners() {
-    this._buttonLike.addEventListener("click", () => {
-      this._handleLikeButtonClick();
+    this._like.addEventListener("click", () => {
+      this._handleLikeButton();
     });
 
-    this._element
-      .querySelector(".button-remove")
-      .addEventListener("click", () => {
-        this._handleDeleteButtonClick();
+    this._element.querySelector(".button-remove").addEventListener("click", () => {
+        this._handleDeleteButton();
       });
 
     this._image.addEventListener("click", () => {
-      handleOpenPopupImage(this._name, this._link);
+      this._zoomImageCard();
     });
   }
 
-  _handleLikeButtonClick() {
-    this._buttonLike.classList.toggle("card__like_active");
+  _handleLikeButton() {
+    this._like.classList.toggle("card__like_active");
   }
 
-  _handleDeleteButtonClick() {
+  _handleDeleteButton() {
     this._element.remove();
     this._element = null;
   }
