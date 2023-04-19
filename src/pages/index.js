@@ -2,7 +2,8 @@ import "./index.css"
 
 import { Card } from "../components/Card.js";
 import { FormValidator } from "../components/FormValidator.js";
-import { initialCards, formValidation } from "../components/cards.js";
+import { initialCards } from "../utils/cards.js";
+import { formValidation } from "../utils/constants.js";
 import Section from "../components/Section.js";
 import PopupWithForm from "../components/PopupWithForm.js";
 import PopupWithImage from "../components/PopupWithImage.js";
@@ -19,7 +20,7 @@ import {
   formAddPlacePopup, 
   popupProfileAddButton, 
   cardsContainer
-} from "../components/cards.js"
+} from "../utils/constants.js"
 
 
 const validatorEditProfile = new FormValidator(formValidation, formAddProfilePopup);
@@ -67,13 +68,13 @@ const defaultCard = new Section ({
 defaultCard.rendererItems(initialCards);
 
 const renderCard = (data) => {
-  cardsContainer.prepend(createCard(data));
+  defaultCard.addItemStart(createCard(data));
 }
 
-const addUserCard = () => {
+const addUserCard = (data) => {
   const cardItem = {
-    name: popupPlaceName.value,
-    link: imageLinkPopup.value,
+    name: data.title,
+    link: data.link,
   };
   renderCard(cardItem);
 }
