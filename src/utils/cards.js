@@ -1,3 +1,4 @@
+/*
 const initialCards = [
   {
     name: "Архыз",
@@ -27,3 +28,6 @@ const initialCards = [
 
 
 export { initialCards };
+
+*/
+

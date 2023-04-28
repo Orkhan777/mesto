@@ -1,0 +1,9 @@
+.profile__avatar-edit {
+  background-size: 26px 26px;
+  background-repeat: no-repeat;
+}
+  
+.profile__avatar-edit:hover {
+  background: url(../../../images/EditAvatar.svg) no-repeat transparent;
+  opacity: .2;
+}
