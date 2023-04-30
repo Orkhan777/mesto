@@ -1,9 +1,11 @@
 .profile__avatar-edit {
-  background-size: 26px 26px;
+  display: flex;
+  background-image: url(../../../images/EditAvatar.svg);
   background-repeat: no-repeat;
-}
-  
-.profile__avatar-edit:hover {
-  background: url(../../../images/EditAvatar.svg) no-repeat transparent;
-  opacity: .2;
+  background-position: center;
+  background-color: #000;
+  min-width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
 }

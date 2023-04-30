@@ -28,6 +28,7 @@ const formValidation = {
   aboutSelector: ".profile__position",
   popupZoom: "#img-popup",
   popupDelete: "#delete-card",
+  templiteSelector: "#card__template",
   popupAddAvatar: "#add-avatar-popup",
 };
 

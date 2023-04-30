@@ -114,7 +114,7 @@ const addAvatar = (data) => {
 function createCard (data) {
   const newCard = new Card 
   (data, 
-  "#card__template",
+    formValidation.templiteSelector,
   () => {
     popupZoomImage.open(data);
   },
@@ -142,6 +142,7 @@ function createCard (data) {
   },
   userProfile.getUserId()
   );
+
   const cardElement = newCard.generateCard();
   return cardElement;
 }
@@ -157,8 +158,8 @@ const defaultCard = new Section ({
 const addUserCard = (data) => {
   popupAddCard.disableButton("Сохранение...");
   api.postUserCard(data)
-    .then((res) => {
-      cards.prepend(createCard(res));
+  .then((res) => {
+      defaultCard.addItemStart(createCard(res));
       popupAddCard.close();
     })
     .catch((error) => {

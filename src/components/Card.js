@@ -1,5 +1,5 @@
 export class Card {
-  constructor(data, templateSelector, handlerCardClick, handlerOpenConfirmationPopup, userId, handleClickLike) {
+  constructor(data, templateSelector, handlerCardClick, handlerOpenConfirmationPopup, handleClickLike, userId) {
     this._data = data;
     this._name = data.name;
     this._link = data.link;
@@ -25,7 +25,7 @@ export class Card {
 
   generateCard() {
     this._element = this._getTemplate();
-    this._like = this._element.querySelector(".card__like");
+    this._like = this._element.querySelector(".card__button-like");
     this._image = this._element.querySelector(".card__image");
     this._delete = this._element.querySelector(".button-remove");
     this._score = this._element.querySelector(".card__like-score");
@@ -64,22 +64,22 @@ export class Card {
     } else {
       console.log("false");
     }
-    this._toggleLikeButton;
+    this._toggleLikeButton();
   }
 
   _startPageLikes() {
     const check = this.checkMyLiked();
     if (check) {
-      this._like.classList.add("card__like_active");
+      this._like.classList.add("card__button-like_active");
     } else {
-      this._like.classList.remove("card__like_active");
+      
     }
   }
 
   _toggleLikeButton() {
-    this._like.classList.toggle("card__like_active");
+    this._like.classList.toggle("card__button-like_active");
   }
-
+  
 
   handlerDeleteButton() {
     this._element.remove();

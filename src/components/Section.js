@@ -8,12 +8,12 @@ export default class Section {
   }
   
   addItemStart(element) {
-    this._container.prepend(element)
+    this._container.prepend(element);
   }
 
   rendererItems(items) {
-    items.forEach((item, index) => {
-        this._renderer(item)
+   items.forEach((item, index) => {
+      this._renderer(item)
     });
   }
 }
